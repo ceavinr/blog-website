@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'PT Sans', sans-serif;
+    caret-color: transparent;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+
+:root {
+  --primary: black;
+  --secondary: white;
+  --white: #fff;
+
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+::-webkit-scrollbar {
+  display: none;  
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: var(--secondary);
+}
+
+li {
+  color: var(--secondary);
+  list-style: none
+}
+
+.warning {
+  color: red;
+}
+
+/* ============= MEDIA QUERIES (MEDIUM DEVICES) ============= */ 
+@media screen and (max-width: 1024px) {
+  .container {
+      width: var(--container-width-lg);
+  }
+
+}
+
+/* ============= MEDIA QUERIES (SMALL DEVICES) ============= */ 
+@media screen and (max-width: 600px) {
+  .container {
+      width: var(--container-width-sm);
+  }
+
+  .heading {
+    font-size: 200%;  
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+input:focus {
+  outline: none;
+  caret-color: var(--primary);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+textarea:focus {
+  outline: none;
+  caret-color: var(--primary);
 }

@@ -1,0 +1,15 @@
+nav {
+    background: black;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 25px;
+}
