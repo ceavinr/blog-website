@@ -11,7 +11,7 @@ function App() {
     <>
       <Router>
         <Navbar isAuth={isAuth} setIsAuth={setIsAuth} />
-        <RoutesConfig setIsAuth={setIsAuth} />
+        <RoutesConfig isAuth={isAuth} setIsAuth={setIsAuth} />
       </Router>
     </>
   );

@@ -21,9 +21,11 @@ export const Navbar = ({ isAuth, setIsAuth }) => {
       {!isAuth ? (
         <Link to="/login">Login</Link>
       ) : (
-        <button onClick={signUserOut}>Log out</button>
+        <>
+          <Link to="/post">Post</Link>
+          <button onClick={signUserOut}>Log out</button>
+        </>
       )}
-      <Link to="/post">Post</Link>
     </nav>
   );
 };
