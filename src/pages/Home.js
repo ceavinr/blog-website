@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { deleteDoc, getDocs, collection, doc } from "firebase/firestore";
 import { auth, db } from "../config/firebaseConfig";
+import "./Home.css";
+import { BsTrash } from "react-icons/bs";
 
 export const Home = ({ isAuth }) => {
   const [posts, setPosts] = useState([]);
@@ -25,18 +27,20 @@ export const Home = ({ isAuth }) => {
         <div className="post-list">
           <div className="post-header">
             <h1 className="post-title">{post.title}</h1>
+            <span className="post-author">— {post.author.name}</span>
+          </div>
+          <div className="post-content">
+            <p>{post.postText}</p>
+          </div>
+          <div className="post-button">
             {isAuth && post.author.id === auth.currentUser.uid && (
               <button
                 className="delete-button"
                 onClick={() => deletePost(post.id)}
               >
-                &#128465;
+                <BsTrash />
               </button>
             )}
-          </div>
-          <div className="post-content">
-            <p>{post.postText}</p>
-            <h3 className="post-author">Author: {post.author.name}</h3>
           </div>
         </div>
       ))}

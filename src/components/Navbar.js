@@ -17,15 +17,22 @@ export const Navbar = ({ isAuth, setIsAuth }) => {
   };
   return (
     <nav>
-      <Link to="/">Home</Link>
-      {!isAuth ? (
-        <Link to="/login">Login</Link>
-      ) : (
-        <>
-          <Link to="/post">Post</Link>
-          <button onClick={signUserOut}>Log out</button>
-        </>
-      )}
+      <div className="navbar-container">
+        <div>
+          <h1>Blog</h1>
+        </div>
+        <div className="">
+          <Link to="/">Home</Link>
+          {!isAuth ? <></> : <Link to="/post">Post</Link>}
+        </div>
+        {!isAuth ? (
+          <Link to="/login">Login</Link>
+        ) : (
+          <button className="logout-button" onClick={signUserOut}>
+            Log out
+          </button>
+        )}
+      </div>
     </nav>
   );
 };

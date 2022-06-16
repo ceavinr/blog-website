@@ -1,0 +1,36 @@
+.post-list {
+    background: black;
+    color: white;
+    margin: 10px 10%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.post-title {
+    text-decoration: underline;
+}
+
+.delete-button {
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.post-content {
+    margin-bottom: 10px;
+}
+
+.post-button {
+    display: flex;
+    justify-content: end;
+}

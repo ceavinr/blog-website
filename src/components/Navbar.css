@@ -1,15 +1,30 @@
-nav {
+.navbar-container {
     background: black;
     height: 80px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    padding: 0 10%;
+    justify-content: space-between;
     align-items: center;
+    color: var(--secondary);
 }
 
 nav a {
+    color: var(--secondary);
     margin: 0 10px;
     text-decoration: none;
-    color: var(--secondary);
     font-size: 25px;
+}
+
+.logout-button {
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.logout-button:hover {
+    background: gray;
 }
