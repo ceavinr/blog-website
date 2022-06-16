@@ -11,7 +11,7 @@ export const RoutesConfig = ({ isAuth, setIsAuth }) => {
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home isAuth={isAuth} />} />
       <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
       <Route element={<ProtectedRoute />}>
         <Route path="/post" element={<Post />} />
